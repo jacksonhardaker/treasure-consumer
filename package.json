@@ -33,13 +33,6 @@
     "typescript": "^4.8.2"
   },
   "remoteGitDependencies": {
-    "treasure-chest": {
-      "sha": "a82d87459233c7122a845d869c0c517c95247dbf",
-      "url": "https://github.com/jacksonhardaker/treasure-chest.git",
-      "subDirectory": "dist/libs/components"
-    }
-  },
-  "thingDeps": {
     "jacksonhardaker/treasure-chest#dist/libs/components": "a82d87459233c7122a845d869c0c517c95247dbf"
   }
 }
