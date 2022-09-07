@@ -1,4 +1,4 @@
-import { Button } from "@treasure-chest";
+import { Button } from "@treasure-chest/components";
 
 const IndexPage = () => {
   return (

@@ -14,12 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@treasure-chest": [
-        "node_modules/treasure-chest/dist/libs/components/src/index.ts"
-      ]
-    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
