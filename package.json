@@ -18,8 +18,11 @@
   "homepage": "https://github.com/jacksonhardaker/treasure-consumer#readme",
   "dependencies": {
     "next": "^12.2.5",
+    "next-transpile-modules": "^9.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "treasure-chest": "github:jacksonhardaker/treasure-chest#a82d87459233c7122a845d869c0c517c95247dbf",
+    "tsconfig-paths-webpack-plugin": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.7.15",
