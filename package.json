@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "mkdir -p remote/treasure-chest; cd remote/treasure-chest; git init --quiet; git remote add origin https://github.com/jacksonhardaker/treasure-chest.git; git fetch --depth 1 origin a82d87459233c7122a845d869c0c517c95247dbf; git config core.sparseCheckout true; echo \"dist/libs/components\" >> .git/info/sparse-checkout; git pull origin a82d87459233c7122a845d869c0c517c95247dbf; cd ../..",
+    "cleanup": "rm -rf ./remotes && rm -rf node_modules",
+    "preinstall": "./install-remotes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
