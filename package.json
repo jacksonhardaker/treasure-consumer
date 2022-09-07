@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "mkdir -p remote/treasure-chest; cd remote/treasure-chest; git init; git remote add origin https://github.com/jacksonhardaker/treasure-chest.git; git fetch --depth 1 origin a82d87459233c7122a845d869c0c517c95247dbf; git checkout FETCH_HEAD; cd ../..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,12 +18,11 @@
   },
   "homepage": "https://github.com/jacksonhardaker/treasure-consumer#readme",
   "dependencies": {
-    "@treasure-chest/components": "https://gitpkg.now.sh/jacksonhardaker/treasure-chest/dist/libs/components?a82d87459233c7122a845d869c0c517c95247dbf",
+    "@treasure-chest/components": "file:remote/treasure-chest/dist/libs/components",
     "next": "^12.2.5",
     "next-transpile-modules": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "treasure-chest": "github:jacksonhardaker/treasure-chest#a82d87459233c7122a845d869c0c517c95247dbf",
     "tsconfig-paths-webpack-plugin": "^4.0.0"
   },
   "devDependencies": {
