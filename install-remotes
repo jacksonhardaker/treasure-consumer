@@ -1,11 +1,20 @@
 #!/bin/bash
 
-mkdir -p remote/treasure-chest
-cd remote/treasure-chest
-git init --quiet
-git remote add origin https://github.com/jacksonhardaker/treasure-chest.git
-git fetch --depth 1 origin a82d87459233c7122a845d869c0c517c95247dbf
-git config core.sparseCheckout true
-echo \"dist/libs/components\" >> .git/info/sparse-checkout
-git pull origin a82d87459233c7122a845d869c0c517c95247dbf
-cd -
+remote=$(jq -c '.remoteGitDependencies | to_entries | .[]' package.json)
+
+for row in $remote; do
+  repo=$(echo "${row}" | jq -r '.key | split("#") | .[0]')
+  subDir=$(echo "${row}" | jq -r '.key | split("#") | .[1]')
+  sha=$(echo "${row}" | jq -r .value)
+
+  mkdir -p "remote/$repo"
+  cd "remote/$repo"
+  git init --quiet
+  git remote add origin "https://github.com/$repo"
+  git fetch --depth 1 origin $sha
+  git config core.sparseCheckout true
+  echo $subDir >> .git/info/sparse-checkout
+  git pull origin $sha
+  cd -
+done
+
