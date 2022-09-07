@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/jacksonhardaker/treasure-consumer#readme",
   "dependencies": {
-    "@treasure-chest/components": "file:remote/treasure-chest/dist/libs/components",
+    "@treasure-chest/components": "file:remote/jacksonhardaker/treasure-chest/dist/libs/components",
     "next": "^12.2.5",
     "next-transpile-modules": "^9.0.0",
     "react": "^18.2.0",
